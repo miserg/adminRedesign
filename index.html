@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADMIN Panel Redesign</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #0d1b2a;
+      color: #e0e1dd;
+      font-family: monospace;
+    }
+    .section-title {
+      margin-top: 2rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-bottom: 1px solid #415a77;
+      padding-bottom: 0.5rem;
+    }
+    .console {
+      background: #000;
+      color: #0f0;
+      padding: 1rem;
+      height: 200px;
+      overflow-y: auto;
+      font-size: 0.85rem;
+    }
+    .btn-sm {
+      margin: 0.2rem;
+    }
+  </style>
+</head>
+<body class="container py-4">
+  <h1 class="text-primary">ADMIN</h1>
+
+  <div class="section-title">Výstup konzole</div>
+  <div class="console mb-4">[console output]</div>
+
+  <div class="section-title">Spuštění</div>
+  <p>Server: <a href="https://byzn-sergachev.seyfor.com/" class="link-info">https://byzn-sergachev.seyfor.com/</a></p>
+  <p>Služba: BYZNS_ONLINE_NSSM 
+    <button class="btn btn-sm btn-success">On</button>
+    <button class="btn btn-sm btn-danger">Off</button>
+  </p>
+  <button class="btn btn-sm btn-warning">Manuální start</button>
+  <button class="btn btn-sm btn-danger">Kill node</button>
+
+  <div class="section-title">Admin</div>
+  <button class="btn btn-sm btn-secondary">Stop</button>
+  <button class="btn btn-sm btn-secondary">Cls</button>
+  <button class="btn btn-sm btn-secondary">Abort</button>
+  <button class="btn btn-sm btn-info">Dohlásit</button>
+
+  <div class="section-title">Nástroje</div>
+  <button class="btn btn-sm btn-outline-light">Watchdog</button>
+  <div class="mt-2">
+    Výstup konzole: 
+    <button class="btn btn-sm btn-outline-light">Přepnout výpis</button>
+    <button class="btn btn-sm btn-outline-success">On</button>
+    <button class="btn btn-sm btn-outline-danger">Off</button>
+    <button class="btn btn-sm btn-outline-warning">Clean</button>
+  </div>
+  <div class="mt-2">
+    <button class="btn btn-sm btn-outline-light">MSSQL</button>
+    <button class="btn btn-sm btn-outline-light">Terminal</button>
+    <button class="btn btn-sm btn-outline-light">Config</button>
+    <button class="btn btn-sm btn-outline-light">Docker</button>
+    <button class="btn btn-sm btn-outline-light">Vypnout režim údržby</button>
+    <button class="btn btn-sm btn-outline-light">Logy</button>
+    <button class="btn btn-sm btn-outline-light">Mailing</button>
+    <button class="btn btn-sm btn-outline-light">Cache</button>
+    <button class="btn btn-sm btn-outline-light">Notifikace</button>
+  </div>
+
+  <div class="section-title">Monitoring</div>
+  <div class="row g-2">
+    <div class="col-md-6">
+      <input type="text" class="form-control" placeholder="Client login">
+    </div>
+    <div class="col-md-6">
+      <input type="password" class="form-control" placeholder="Client password">
+    </div>
+  </div>
+  <button class="btn btn-sm btn-outline-success mt-2">Spust</button>
+
+  <div class="section-title">Údržba a nastavení</div>
+  <div class="mb-2">
+    <button class="btn btn-sm btn-outline-light">Stáhni jádro BO4 (stable: v524)</button>
+    <button class="btn btn-sm btn-outline-light">Stáhni jádro BO4 (beta: v524)</button>
+    <button class="btn btn-sm btn-outline-light">SVN update</button>
+  </div>
+  <button class="btn btn-sm btn-outline-warning">Instalace npm</button>
+  <div class="mt-2">
+    <label>Založení databáze:</label>
+    <select class="form-select d-inline w-auto">
+      <option>Alpha</option>
+      <option>DMS</option>
+      <option>KEY BO 4</option>
+    </select>
+    <button class="btn btn-sm btn-outline-success">Spust</button>
+  </div>
+  <div class="mt-2">
+    <label>Aktualizace struktur:</label>
+    <select class="form-select d-inline w-auto">
+      <option>VŠE</option>
+      <option>DISTRIBUCE</option>
+    </select>
+    <input type="text" class="form-control d-inline w-auto" placeholder="xxx,yyy">
+    <button class="btn btn-sm btn-outline-success">Spust</button>
+  </div>
+  <div class="mt-2">
+    <label>Nulová data:</label>
+    <select class="form-select d-inline w-auto">
+      <option>BO 4</option>
+      <option>DISTRIBUCE</option>
+    </select>
+    <button class="btn btn-sm btn-outline-success">Spust</button>
+  </div>
+
+  <div class="section-title">Firststart multiverze</div>
+  <select class="form-select d-inline w-auto">
+    <option>STRUKTURY</option>
+    <option>VŠE</option>
+    <option>DISTRIBUCE</option>
+    <option>COMPATIBLE</option>
+  </select>
+  <button class="btn btn-sm btn-outline-success">Spust</button>
+
+  <div class="section-title">Konfigurace</div>
+  <input type="text" class="form-control d-inline w-auto" placeholder="ZD3-V1OZ-5V0JE-6U1D">
+  <select class="form-select d-inline w-auto">
+    <option>DISTRIBUCE</option>
+  </select>
+  <button class="btn btn-sm btn-outline-success">Spust</button>
+  <button class="btn btn-sm btn-outline-danger">Odinstaluj všechny konfigurace</button>
+
+  <div class="section-title">Zámky & Triggery</div>
+  <button class="btn btn-sm btn-outline-danger">Odstraň zámky (BO 4)</button>
+  <div class="mt-2">
+    <label>Centrální vyhledávání:</label>
+    <select class="form-select d-inline w-auto">
+      <option>BO 4</option>
+    </select>
+    <button class="btn btn-sm btn-outline-primary">Jednorázový přepočet</button>
+    <button class="btn btn-sm btn-outline-success">Založ</button>
+    <button class="btn btn-sm btn-outline-success">Aktivuj</button>
+    <button class="btn btn-sm btn-outline-warning">Deaktivuj</button>
+  </div>
+
+  <div class="section-title">Správa modulů</div>
+  <div class="d-flex flex-wrap">
+    <button class="btn btn-sm btn-outline-light">Mzdy a personalistika</button>
+    <button class="btn btn-sm btn-outline-light">Evidence majetku</button>
+    <button class="btn btn-sm btn-outline-light">Fakturace</button>
+    <button class="btn btn-sm btn-outline-light">Finanční účetnictví</button>
+    <button class="btn btn-sm btn-outline-light">Bankovní operace</button>
+    <button class="btn btn-sm btn-outline-light">Skladové hospodářství</button>
+    <button class="btn btn-sm btn-outline-light">Pokladna</button>
+    <button class="btn btn-sm btn-outline-light">Centrální menu</button>
+    <button class="btn btn-sm btn-outline-light">DMS</button>
+  </div>
+
+  <div class="section-title">Sestavení a verze</div>
+  <button class="btn btn-sm btn-outline-info">Performance Testing</button>
+  <div class="mt-2">
+    <label>Branch:</label>
+    <select class="form-select d-inline w-auto">
+      <option>Hlavní</option>
+    </select>
+    <div class="form-check d-inline mx-2">
+      <input class="form-check-input" type="checkbox" value="" id="deployCheck">
+      <label class="form-check-label" for="deployCheck">Deploy KOMPILACE</label>
+    </div>
+    <button class="btn btn-sm btn-outline-success">Spust</button>
+  </div>
+  <div class="mt-2">
+    <label>Označení verze k distribuci:</label>
+    <input type="text" class="form-control d-inline w-auto" value="2025/20250725-v524">
+    <button class="btn btn-sm btn-outline-primary">Označ verzi jako distribuční</button>
+  </div>
+  <p class="mt-2">Verze: Nezjištěno</p>
+
+</body>
+</html>
