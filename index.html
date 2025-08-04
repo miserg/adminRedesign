@@ -65,14 +65,19 @@
       <div class="block-title">Uzivatelska cast</div>
       <div class="desc">Sekce uživatelských funkcí nastavení..</div>
        <div class="card" style="background-color: #1e2b3a; color: #e0e1dd; margin-top: 1rem; padding: 1.2rem 1.5rem; font-size: 0.95rem;">
-      <div class="card-body">
-        <button class="btn btn-sm btn-outline-light">Stáhni jádro BO4 (stable: v524)</button>
-        <button class="btn btn-sm btn-outline-light">Stáhni jádro BO4 (beta: v524)</button>
-        <button class="btn btn-sm btn-outline-light">SVN update</button>
-        <button class="btn btn-sm btn-outline-warning">Instalace npm</button>
+      <div class="d-flex justify-content-end">
+        <i class="bi bi-question-circle-fill tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="left" aria-label="Tato sekce umožňuje správu verzí a databází." data-bs-original-title="Tato sekce umožňuje správu verzí a databází."></i>
+      </div>
+      <div class="card-actions">
+        <div class="card-buttons-row">
+          <button class="btn btn-sm btn-outline-light">Stáhni jádro BO4 (stable: v524)</button>
+          <button class="btn btn-sm btn-outline-light">Stáhni jádro BO4 (beta: v524)</button>
+          <button class="btn btn-sm btn-outline-light">SVN update</button>
+          <button class="btn btn-sm btn-outline-warning">Instalace npm</button>
+        </div>
 
         <div class="mt-3">
-          <label>Založení databáze:</label>
+          <label class="me-2">Založení databáze:</label>
           <select class="form-select form-select-sm d-inline w-auto">
             <option>BO 4</option>
           </select>
@@ -80,7 +85,7 @@
         </div>
 
         <div class="mt-3">
-          <label>Aktualizace struktur:</label>
+          <label class="me-2">Aktualizace struktur:</label>
           <select class="form-select form-select-sm d-inline w-auto">
             <option>VŠE</option>
             <option>DISTRIBUCE</option>
@@ -90,7 +95,7 @@
         </div>
 
         <div class="mt-3">
-          <label>Nulová data:</label>
+          <label class="me-2">Nulová data:</label>
           <select class="form-select form-select-sm d-inline w-auto">
             <option>BO 4</option>
             <option>DISTRIBUCE</option>
